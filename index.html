@@ -1,80 +1,163 @@
-<!DOCTYPE HTML>
 <html>
 <head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+	<title>The world most wonderful woman Amy</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<!-- slef css -->
+	<style>
+		*{margin:0;
+		padding: 0;
+		font-size:22px;}
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e9e0ed8d2dd56059cc040dc1f05b7424";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+		body{
+			overflow: hidden;
+		}
+		.selectBar,.selectNav{
+			position: fixed;
+			bottom:0;
+			width: 25%;
+			height: 3em;
+			background: #ccc;
+		}
+		#selectBar2,#selectNav2{
+			left:25%;
+		}
+		#selectBar3,#selectNav3{
+			left:50%;
+		}
+		#selectBar4,#selectNav4{
+			left:75%;
+		}
+		.selectNav{
+			z-index: 100;
+			text-align: center;
+			line-height: 3em;
+		}
+		.selectBar{
+			z-index: 101;
+			opacity: 0;
+			cursor: pointer;
+		}
+		.selectBar:checked+.selectNav{
+			background: #fff;
+		}
+		.content{
+			position: relative;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			transform: translate3d(0,0,0); 
 
+		}
+		.panel{
+			position: relative;
+			width:100%;
+			height: 100%;
+			border:0;
+			margin: 0;
+			padding: 0;
+		}
+		/*通过单选框使content整体上下滑动*/
+		#selectBar1:checked~.content{
+			transform: translateY(0%);
+		}
+		#selectBar2:checked~.content{
+			transform: translateY(-100%);
+		}
+		#selectBar3:checked~.content{
+			transform: translateY(-200%);
+		}
+		#selectBar4:checked~.content{
+			transform: translateY(-300%);
+		}
 
+		/*bootstrp try*/
+
+		.col-xs-3{
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.col-xs-3 a{
+			margin-bottom: 0px;
+		}
+		img{
+			max-height: 170px;
+		}
+
+	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="big-container">
+	<!-- 底部导航栏 -->
+		<input type="radio" class="selectBar" name='select' id='selectBar1' checked="checked">
+		<div class="selectNav" id='selectNav1'>Happy fool's day</div>
+		<input type="radio" class="selectBar" name='select' id="selectBar2">
+		<div class="selectNav" id="selectNav2">apology</div>
+		<input type="radio" class="selectBar" name='select' id="selectBar3">
+		<div class="selectNav" id="selectNav3">some feeling</div>
+		<input type="radio" class="selectBar" name='select' id="selectBar4">
+		<div class="selectNav" id="selectNav4">best wishes</div>
+
+	<!-- 整体滑动页面 -->
+	<div class="content">
+
+	<!-- 页面HAPPY FOOL'S DAY -->
+		<section class="panel" id='panel1'>
+
+		<!-- bootstap try -->
+		<div class="container">
 		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/1.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/2.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/3.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/4.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/5.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/6.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/7.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/8.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="https://shijieshangzuimeidenvren.github.io" class="thumbnail">
-					<img src="img/9.jpg" alt="...">
-				</a>
-			</div>
-		</div>
+	    <div class="col-md-3 col-xs-3">
+		<a href="" class="thumbnail"><img src="img/1.jpg" alt=""></a>
+	    </div>
+	   	<div class="col-md-3 col-xs-3">
+		<a href="" class="thumbnail"><img src="img/2.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-3 col-xs-3">
+		<a href="" class="thumbnail"><img src="img/3.jpg" alt=""></a>
+	    </div>
+	 	 </div>
+
+	   <div class="row">
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/4.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/51.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/6.jpg" alt=""></a>
+	    </div>
+	  	</div>
+
+	  	<div class="row">
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/6.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/7.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-3 col-xs-3">
+	    <a href="" class="thumbnail"><img src="img/8.jpg" alt=""></a>
+	    </div>
+	  	</div>
+	 	 </div>
+
+
+		</section>
+
+
+
+		<section class="panel" id='panel2'>2222</section>
+		<section class="panel" id='panel3'>33333</section>
+		<section class="panel" id='panel4'>44444</section>
+
 	</div>
 
+	</div>
 </body>
 </html>
