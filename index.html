@@ -14,12 +14,14 @@
 		body{
 			overflow: hidden;
 		}
+		/*下导航框*/
 		.selectBar,.selectNav{
+			color: #fff;
 			position: fixed;
 			bottom:0;
 			width: 25%;
 			height: 3em;
-			background: #ccc;
+			background: #ff88cc;
 		}
 		#selectBar2,#selectNav2{
 			left:25%;
@@ -41,18 +43,22 @@
 			cursor: pointer;
 		}
 		.selectBar:checked+.selectNav{
-			background: #fff;
+			background: #ff44aa;
 		}
+		/*内容*/
 		.content{
 			position: relative;
 			top:0;
 			left:0;
 			width: 100%;
 			height: 100%;
+
 			transform: translate3d(0,0,0); 
+			transition: all 0.6s ease-in-out;
 
 		}
 		.panel{
+			background: #ffb7dd;
 			position: relative;
 			width:100%;
 			height: 100%;
@@ -76,16 +82,22 @@
 
 		/*bootstrp try*/
 
-		.col-xs-3{
+		.col-xs-4{
 			padding-left: 0px;
 			padding-right: 0px;
 		}
 
-		.col-xs-3 a{
+		.col-xs-4 a{
 			margin-bottom: 0px;
 		}
-		img{
+		.container img{
 			max-height: 170px;
+		}
+		/*自适应*/
+		@media screen and (max-width: 680px){
+			.selectNav{
+				font-size: 15px;
+			}
 		}
 
 	</style>
@@ -98,9 +110,9 @@
 		<input type="radio" class="selectBar" name='select' id="selectBar2">
 		<div class="selectNav" id="selectNav2">apology</div>
 		<input type="radio" class="selectBar" name='select' id="selectBar3">
-		<div class="selectNav" id="selectNav3">some feeling</div>
+		<div class="selectNav" id="selectNav3">feeling</div>
 		<input type="radio" class="selectBar" name='select' id="selectBar4">
-		<div class="selectNav" id="selectNav4">best wishes</div>
+		<div class="selectNav" id="selectNav4">wishes</div>
 
 	<!-- 整体滑动页面 -->
 	<div class="content">
@@ -111,38 +123,38 @@
 		<!-- bootstap try -->
 		<div class="container">
 		<div class="row">
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 		<a href="" class="thumbnail"><img src="img/1.jpg" alt=""></a>
 	    </div>
-	   	<div class="col-md-3 col-xs-3">
+	   	<div class="col-md-4 col-xs-4">
 		<a href="" class="thumbnail"><img src="img/2.jpg" alt=""></a>
 	    </div>
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 		<a href="" class="thumbnail"><img src="img/3.jpg" alt=""></a>
 	    </div>
 	 	 </div>
 
 	   <div class="row">
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 	    <a href="" class="thumbnail"><img src="img/4.jpg" alt=""></a>
 	    </div>
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 	    <a href="" class="thumbnail"><img src="img/51.jpg" alt=""></a>
 	    </div>
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 	    <a href="" class="thumbnail"><img src="img/6.jpg" alt=""></a>
 	    </div>
 	  	</div>
 
 	  	<div class="row">
-	    <div class="col-md-3 col-xs-3">
-	    <a href="" class="thumbnail"><img src="img/6.jpg" alt=""></a>
-	    </div>
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 	    <a href="" class="thumbnail"><img src="img/7.jpg" alt=""></a>
 	    </div>
-	    <div class="col-md-3 col-xs-3">
+	    <div class="col-md-4 col-xs-4">
 	    <a href="" class="thumbnail"><img src="img/8.jpg" alt=""></a>
+	    </div>
+	    <div class="col-md-4 col-xs-4">
+	    <a href="" class="thumbnail"><img src="img/9.jpg" alt=""></a>
 	    </div>
 	  	</div>
 	 	 </div>
