@@ -42,6 +42,9 @@
 			opacity: 0;
 			cursor: pointer;
 		}
+		.selectBar:hover+.selectNav{
+			background: #ff66cc;
+		}
 		.selectBar:checked+.selectNav{
 			background: #ff44aa;
 		}
@@ -65,6 +68,9 @@
 			border:0;
 			margin: 0;
 			padding: 0;
+		}
+		#panel2,#panel4{
+			background: #fff;
 		}
 		/*通过单选框使content整体上下滑动*/
 		#selectBar1:checked~.content{
@@ -93,13 +99,120 @@
 		.container img{
 			max-height: 170px;
 		}
-		/*自适应*/
-		@media screen and (max-width: 680px){
-			.selectNav{
-				font-size: 15px;
-			}
+
+		/*section1*/
+		#panel1 div{
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			text-align: center;
+			font-size: 2em;
+			line-height:2em;
+			position: absolute;
+		}
+		.text1{	 
+			width: 80%;
+			left: 10%;
+			top: 30%;
+
+		}
+		.text2{
+			width: 80%;
+			left: 10%;
+			top:40%;
+		}
+		.text3{
+			width: 80%;
+			left: 10%;
+			top:50%;
 		}
 
+
+		#selectBar1:checked~ .content #panel1 .text1{
+			animation: movedown 1s ease-in-out 0.2s backwards;
+
+		}
+		#selectBar1:checked~ .content #panel1 .text2{
+			animation: moveright 1s ease-in-out 0.7s backwards;
+
+		}
+		#selectBar1:checked~ .content #panel1 .text3{
+			animation: moveup 1s ease-in-out 1.2s backwards;
+
+		}
+
+		@keyframes movedown{
+			0%{
+				transform: translateY(-100px);
+				opacity: 0;
+			}
+			100%{
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+		}
+		@keyframes moveright{
+			0%{
+				transform: translateX(-100px);
+				opacity: 0;
+			}
+			100%{
+				transform: translateX(0);
+				opacity: 1;
+			}
+
+		}
+		@keyframes moveup{
+			0%{
+				transform: translateY(100px);
+				opacity: 0;
+			}
+			100%{
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+		}
+
+		/*section3*/
+		.text4{
+			color:#fff;
+			width:100%;
+			font-size: 2em;
+			line-height: 2em;
+		}
+
+		#selectBar3:checked~ .content #panel3 #texti1{
+			animation: moveup 1s ease-in-out 0.3s backwards;
+		}
+		#selectBar3:checked~ .content #panel3 #texti2{
+			animation: moveup 1s ease-in-out 0.8s backwards;
+		}
+		#selectBar3:checked~ .content #panel3 #texti3{
+			animation: moveup 1s ease-in-out 1.3s backwards;
+		}
+		/*section4*/
+		#panel4 h2{
+			font-size: 3em;
+			color:#ffb7dd;
+		}
+		#panel4 p{
+			font-size: 2em;
+			color:#ffb7dd;
+		}
+
+		/*自适应*/
+		@media screen and (max-width: 1024px){
+			*{
+				font-size: 19px;
+			}
+		@media screen and (max-width: 680px){
+			*{
+				font-size: 15px;
+			}
+			
+		}
 	</style>
 </head>
 <body>
@@ -108,9 +221,9 @@
 		<input type="radio" class="selectBar" name='select' id='selectBar1' checked="checked">
 		<div class="selectNav" id='selectNav1'>Happy fool's day</div>
 		<input type="radio" class="selectBar" name='select' id="selectBar2">
-		<div class="selectNav" id="selectNav2">apology</div>
+		<div class="selectNav" id="selectNav2">Muse</div>
 		<input type="radio" class="selectBar" name='select' id="selectBar3">
-		<div class="selectNav" id="selectNav3">feeling</div>
+		<div class="selectNav" id="selectNav3">apology</div>
 		<input type="radio" class="selectBar" name='select' id="selectBar4">
 		<div class="selectNav" id="selectNav4">wishes</div>
 
@@ -119,8 +232,15 @@
 
 	<!-- 页面HAPPY FOOL'S DAY -->
 		<section class="panel" id='panel1'>
+		<div class='text1'>HAPPY</div>
+		<div class='text2'>FOOL'S</div>
+		<div class='text3'>DAY</div>
+		</section>
 
-		<!-- bootstap try -->
+
+
+		<section class="panel" id='panel2'>
+					<!-- bootstap try -->
 		<div class="container">
 		<div class="row">
 	    <div class="col-md-4 col-xs-4">
@@ -159,14 +279,19 @@
 	  	</div>
 	 	 </div>
 
-
 		</section>
-
-
-
-		<section class="panel" id='panel2'>2222</section>
-		<section class="panel" id='panel3'>33333</section>
-		<section class="panel" id='panel4'>44444</section>
+		<section class="panel" id='panel3'>
+			<div class='text4' id='texti1'>I'm really sorry for bothering you again and again.</div>
+			<div class="text4" id='texti2'>But i promise there is no aspiration or delusion,just some best wishes and a little gift.</div>
+			<div class="text4" id='texti3'>So please please don't feel disgusting or perturbed,just accept it and have some fun.</div>
+		</section>
+		<section class="panel" id='panel4'>
+		<h2>Best Wishes for you!</h2>
+		<p>Spring water begins to flow,</br>
+			And spring woods furiously grow,</br>
+			Spring breeze from afar wafts here,</br>
+			But pales before my lady dear.</p>
+		</section>
 
 	</div>
 
